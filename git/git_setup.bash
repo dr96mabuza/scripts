@@ -4,11 +4,13 @@
 git_username=""
 while ["$git_username" = ""]
 do
-    echo Plese enter your new git username:
-    read user_git_username
-    $git_username = $user_git_username
+    read -p "Plese enter your new git global username: " user_input_1
+    read -p "Following git global username correct: $user_input_1? (y/n): " correct_username
+    if [ "$correct_username" = "y" ]; then
+        git_username="$user_input_1"
+    fi
 done
 
-echo $git_username
+git config --global user.name "$git_username"
 
 
