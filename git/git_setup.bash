@@ -26,3 +26,7 @@ done
 
 #change git global email
 git config --global user.email "$git_email"
+#change default git branch
+git config --global init.defaultBranch main
+#enable colorful output
+git config --global color.ui auto
