@@ -2,12 +2,12 @@
 #git setup
  
 git_username=""
-while ["$git_username" = ""]
-do
+while true; do
     read -p "Plese enter your new git global username: " user_input_1
     read -p "Following git global username correct: $user_input_1? (y/n): " correct_username
     if [ "$correct_username" = "y" ]; then
         git_username="$user_input_1"
+        break
     fi
 done
 
